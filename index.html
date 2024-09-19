@@ -1,30 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Blondie Brews | Home</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="nav-bar">
-        <h1 class="title">Blondie<span> Brews</span></h1>
-        <ul class="menu">
-          <li><a href="/">HOME</a></li>
-          <li><a href="/specials.html">SPECIALS</a></li>
-          <li><a href="#">CONTACT</a></li>
-          <li><a href="#">ABOUT</a></li>
-        </ul>
-      </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blondie Brews</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #f0d6a4;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+        }
+        footer {
+            background-color: #f0d6a4;
+            padding: 10px;
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #f0d6a4;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
 
-      <div class="home">
-        <h1 class="title-1">
-          Good <span> Coffee </span> will always<br/>Bring you up
-        </h1>
-        <p>you'll leave with a smile on your face!</p>
-        <button type="button">Pre-order</button>
-      </div>
-    </div>
-  </body>
+    <header>
+        <h1>Blondie Brews</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="specials.html">Specials</a>
+            <a href="preorder.html">Preorder</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to Blondie Brews!</h2>
+            <p>Experience the finest coffee blends in a warm, inviting atmosphere. Whether you're here for a quick cup or a leisurely catch-up with friends, we've got you covered!</p>
+        </section>
+
+        <section id="specials">
+            <h2>Our Menu</h2>
+            <ul>
+                <li>Espresso</li>
+                <li>Latte</li>
+                <li>Cappuccino</li>
+                <li>Cold Brew</li>
+                <li>Pastries & Snacks</li>
+            </ul>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>At Blondie Brews, we are passionate about coffee. Our mission is to bring you the best coffee experience in a cozy, welcoming atmosphere.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Blondie Brews. All Rights Reserved.</p>
+    </footer>
+
+</body>
 </html>

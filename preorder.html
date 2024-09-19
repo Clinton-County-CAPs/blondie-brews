@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blondie Brews - Specials</title>
+    <title>Blondie Brews - Preorder</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -29,6 +29,22 @@
             font-size: 2em;
             font-weight: bold;
         }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #f0d6a4;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
         footer {
             background-color: #f0d6a4;
             padding: 10px;
@@ -49,12 +65,20 @@
 
     <main>
         <section>
-            <h2>Monthly Specials</h2>
-            <ul>
-                <li><strong>October:</strong> Pumpkin Spice Latte - A fall favorite!</li>
-                <li><strong>November:</strong> Maple Pecan Cold Brew - A delicious twist!</li>
-                <li><strong>December:</strong> Peppermint Mocha - Get into the holiday spirit!</li>
-            </ul>
+            <h2>Preorder Your Coffee</h2>
+            <p>Fill out the form below to place your preorder:</p>
+            <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="order">Order:</label>
+                <textarea id="order" name="order" rows="4" required></textarea>
+                
+                <button type="submit">Submit Order</button>
+            </form>
         </section>
     </main>
 
