@@ -64,6 +64,17 @@
         .send-button:hover {
             background-color: #a07a4a; /* Even darker on hover */
         }
+        nav {
+            margin-top: 10px; /* Optional: space between title and nav */
+        }
+        nav a {
+            color: white; /* White text color */
+            text-decoration: none; /* Remove underline */
+            margin: 0 15px; /* Spacing between links */
+        }
+        nav a:hover {
+            text-decoration: underline; /* Optional: underline on hover */
+        }
         footer {
             background-color: #d2b48c; /* Light caramel */
             color: white;
@@ -98,7 +109,7 @@
 
                 <label for="order">Order</label>
                 <textarea name="order" id="order" placeholder="Your Order" rows="4" required></textarea>
-                
+
                 <button type="submit" class="send-button">Submit Order</button>
             </form>
         </section>
