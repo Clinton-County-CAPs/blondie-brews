@@ -3,103 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blondie Brews</title>
+    <title>Blondie Brews | Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Raleway', sans-serif;
+            background-color: #f5f5dc; /* Soft cream */
+            color: #3b2a2a; /* Dark chocolate brown */
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
         }
         header {
-            background-color: #f0d6a4;
+            background-color: #d2b48c; /* Light caramel */
             padding: 20px;
             text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .hero {
+            background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwyMDg1M3wwfDF8c2VhcmNofDV8fGZhdGV8ZW58MHx8fHwxNjEyMjI0MTU4&ixlib=rb-1.2.1&q=80&w=1080');
+            background-size: cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
         main {
             padding: 20px;
-            max-width: 800px;
-            margin: auto;
         }
         section {
-            margin-bottom: 40px;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
         h2 {
             font-size: 2em;
-            font-weight: bold;
+            color: #d2b48c; /* Light caramel */
+            border-bottom: 2px solid #b58f5b; /* Darker caramel */
+            padding-bottom: 10px;
         }
-        a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
-        }
-        footer {
-            background-color: #f0d6a4;
-            padding: 10px;
-            text-align: center;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
+        label {
+            display: block;
+            margin: 10px 0 5px;
         }
         input, textarea {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 20px;
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
         }
-        button {
-            background-color: #f0d6a4;
+        .send-button {
+            background-color: #b58f5b; /* Darker caramel */
+            color: white;
             border: none;
-            padding: 10px 20px;
-            font-weight: bold;
+            padding: 10px;
+            border-radius: 4px;
             cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+        .send-button:hover {
+            background-color: #a07a4a; /* Even darker on hover */
+        }
+        footer {
+            background-color: #d2b48c; /* Light caramel */
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
-
     <header>
         <h1>Blondie Brews</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="specials.html">Specials</a>
-            <a href="preorder.html">Preorder</a>
-        </nav>
     </header>
 
+    <div class="hero">
+        <h2>Welcome to Blondie Brews</h2>
+    </div>
+
     <main>
-        <section id="home">
-            <h2>Welcome to Blondie Brews!</h2>
-            <p>Experience the finest coffee blends in a warm, inviting atmosphere. Whether you're here for a quick cup or a leisurely catch-up with friends, we've got you covered!</p>
-        </section>
-
-        <section id="specials">
-            <h2>Our Menu</h2>
-            <ul>
-                <li>Espresso</li>
-                <li>Latte</li>
-                <li>Cappuccino</li>
-                <li>Cold Brew</li>
-                <li>Pastries & Snacks</li>
-            </ul>
-        </section>
-
-        <section id="about">
+        <section>
             <h2>About Us</h2>
-            <p>At Blondie Brews, we are passionate about coffee. Our mission is to bring you the best coffee experience in a cozy, welcoming atmosphere.</p>
+            <p>At Blondie Brews, we specialize in crafting the perfect cup of coffee using premium beans. Whether you're here to enjoy a quiet moment or catch up with friends, our cozy atmosphere is the perfect place to relax.</p>
         </section>
 
-        <section id="contact">
+        <section>
+            <h2>Our Offerings</h2>
+            <div class="gallery">
+                <img src="https://images.unsplash.com/photo-1511918984142-55e88500f9d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwyMDg1M3wwfDF8c2VhcmNofDV8fGNhZmV8ZW58MHx8fHwxNjEyMjI0MTU4&ixlib=rb-1.2.1&q=80&w=1080" alt="Coffee">
+                <img src="https://images.unsplash.com/photo-1542736681-16bcb2e788c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwyMDg1M3wwfDF8c2VhcmNofDF8fGZsYXR0ZXJ5fGVufDB8fHx8MTYxMjIyNDE1OQ&ixlib=rb-1.2.1&q=80&w=1080" alt="Coffee Latte">
+                <img src="https://images.unsplash.com/photo-1511921142026-e0d2c2509e1f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwyMDg1M3wwfDF8c2VhcmNofDZ8fGNhZmV8ZW58MHx8fHwxNjEyMjI0MTU4&ixlib=rb-1.2.1&q=80&w=1080" alt="Pastry">
+                <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwyMDg1M3wwfDF8c2VhcmNofDd8fGNhZmV8ZW58MHx8fHwxNjEyMjI0MTU4&ixlib=rb-1.2.1&q=80&w=1080" alt="Café Atmosphere">
+            </div>
+        </section>
+
+        <section>
             <h2>Contact Us</h2>
-            <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                
-                <button type="submit">Send</button>
+            <form action="mailto:youremail@example.com" method="get" enctype="text/plain">
+                <label for="name">1. Your Name</label>
+                <input type="text" name="name" id="name" placeholder="Your Name" required>
+
+                <label for="email">2. Your Email</label>
+                <input type="email" name="email" id="email" placeholder="Your Email" required>
+
+                <label for="inquiry">3. Your Inquiry</label>
+                <textarea name="inquiry" id="inquiry" placeholder="Your Inquiry" rows="4" required></textarea>
+
+                <button type="submit" class="send-button">Send</button>
             </form>
         </section>
     </main>
@@ -107,6 +130,5 @@
     <footer>
         <p>&copy; 2024 Blondie Brews. All Rights Reserved.</p>
     </footer>
-
 </body>
 </html>
