@@ -12,6 +12,7 @@
             color: #3b2a2a; /* Dark chocolate brown */
             margin: 0;
             padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
         header {
             background-color: #d2b48c; /* Light caramel */
@@ -21,7 +22,7 @@
         h1 {
             font-size: 3em;
             margin: 0;
-            color:white
+            color: white;
         }
         nav {
             margin-top: 10px; /* Optional: space between title and nav */
@@ -35,20 +36,38 @@
             text-decoration: underline; /* Optional: underline on hover */
         }
         .hero {
-            background-image: url('https://lh3.googleusercontent.com/p/AF1QipN1-QahRFuK-iXjYhOExytIQPFCpBJwiBklfy7R=s1360-q80-h1080');
-            background-size: cover;
+            position: relative;
             height: 150px;
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: hidden; /* Prevent overflow of the pseudo-element */
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://lh3.googleusercontent.com/p/AF1QipNa01r0Qe7MB9XfocH4twTzMReutB74NjTlXTq2=s1360-w1360-h1020');
+            background-size: cover;
+            filter: blur(8px); /* Adjust the blur radius as needed */
+            z-index: 0; /* Send the pseudo-element to the back */
+        }
+        .hero h2 {
+            position: relative; /* Keep the text above the blurred background */
+            z-index: 1; /* Bring the text above the pseudo-element */
             color: white;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
         main {
             padding: 20px;
+            max-width: 1200px; /* Set a max-width to prevent overflow */
+            margin: 0 auto; /* Center the content */
         }
         section {
-            max-width: 800px;
+            max-width: 800px; /* Ensure sections are not too wide */
             margin: 20px auto;
             padding: 20px;
             background-color: white;
@@ -95,6 +114,20 @@
             bottom: 0;
             width: 100%;
         }
+        /* Gallery styles */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+            gap: 20px; /* Space between images */
+            justify-items: center; /* Center images within their grid cells */
+        }
+        .gallery img {
+            width: 100%; /* Ensure images are responsive */
+            height: 200px; /* Set a fixed height */
+            object-fit: cover; /* Maintain aspect ratio, cropping if necessary */
+            border-radius: 8px; /* Optional: rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: shadow for effect */
+        }
     </style>
 </head>
 <body>
@@ -120,7 +153,10 @@
         <section>
             <h2>Photo Gallery</h2>
             <div class="gallery">
-                <img src="https://lh3.googleusercontent.com/p/AF1QipNzLymEL9PNOr46v3fsSZtHXDLJmxkkQinBf7VH=s1360-w1360-h1020" alt="Photo">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipNzLymEL9PNOr46v3fsSZtHXDLJmxkkQinBf7VH=s1360-w1360-h1020" alt="Photo 1">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipMPg7b4jm3MbldrrJ0fYheoxAuv9maY0anVPCG-=s1360-w1360-h1020" alt="Photo 2">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipMrMiKV8cc6LNhx72T9k7BiwBOThaHe0-PUgCa8=s1360-w1360-h1020" alt="Photo 3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBjhVHNXQfhx4otCoEsLeMcXccuO9gmuFNRA&s" alt="Photo 4">
             </div>
         </section>
 

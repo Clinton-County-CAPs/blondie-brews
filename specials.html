@@ -12,6 +12,7 @@
             color: #3b2a2a; /* Dark chocolate brown */
             margin: 0;
             padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
         header {
             background-color: #d2b48c; /* Light caramel */
@@ -21,13 +22,15 @@
         h1 {
             font-size: 3em;
             margin: 0;
-            color:white
+            color: white;
         }
         main {
             padding: 20px;
+            max-width: 1200px; /* Set a max-width to prevent overflow */
+            margin: 0 auto; /* Center the content */
         }
         section {
-            max-width: 800px;
+            max-width: 800px; /* Ensure sections are not too wide */
             margin: 20px auto;
             padding: 20px;
             background-color: white;
