@@ -129,6 +129,11 @@
             border-radius: 8px; /* Optional: rounded corners */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: shadow for effect */
         }
+        .gallery img:nth-child(3) {
+            object-fit: contain; /* Zoom out slightly for photo 3 */
+            height: auto; /* Allow height to adjust based on content */
+            max-height: 250px; /* Limit max height */
+        }
     </style>
 </head>
 <body>
