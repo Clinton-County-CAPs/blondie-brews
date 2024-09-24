@@ -104,13 +104,16 @@
     <main>
         <section>
             <h2>Preorder Your Coffee</h2>
-            <p>Fill out the form below to preorder your favorite drinks.</p>
+            <p>Fill out the form below to preorder your favorite drinks. Made 15 minutes prior to your pickup time!</p>
             <form action="mailto:blondiebrewspreorder@gmail.com" method="get" enctype="text/plain">
                 <label for="name">Name</label>
                 <input type="text" name="name" id="name" placeholder="Your Name" required>
 
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Your Email" required>
+                <label for="number">Phone Number</label>
+                <input type="number" name="number" id="number" placeholder="Your Phone Number" required>
+
+                <label for="pickuptime">When do you want to pick up your drink?</label>
+                <input type="pickuptime" name="pickuptime" id="pickuptime" placeholder="Wanted Pickup Time" required>
 
                 <label for="order">Order</label>
                 <textarea name="order" id="order" placeholder="Your Order" rows="4" required></textarea>
