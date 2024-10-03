@@ -106,6 +106,7 @@
         <section>
             <h2>Preorder Your Coffee</h2>
             <p>Fill out the form below to preorder your favorite drinks. Made 15 minutes prior to your pickup time!</p>
+            <p>You can choose one of our most popular sold items, or put a specific order in! (Please include what you'd like, for example: whipped cream, no sugar, etc)</p>
             <form action="mailto:blondiebrewspreorder@gmail.com" method="get" enctype="text/plain">
                 <label for="name">Name</label>
                 <input type="text" name="name" id="name" placeholder="Your Name" required>
@@ -116,7 +117,7 @@
                 <label for="pickuptime">When do you want to pick up your drink?</label>
                 <input type="text" name="pickuptime" id="pickuptime" placeholder="Your specific time" required>
         
-                <label for="order">Most Popular Items</label>
+                <label for="order">Our Most Popular Items</label>
                 <select name="order" id="order">
                     <option value="" disabled selected>Select an item</option>
                     <option value="Hot Spiced Chai (16oz) - $5.75">Hot Spiced Chai (16oz) - $5.75</option>
@@ -137,7 +138,7 @@
                     <option value="Sprite - $2.00">Sprite - $2.00</option>
                 </select>
                 
-                <label for="specificorder">Specific Order? Right here!</label>
+                <label for="specificorder">Got a specific order? Put it right here!</label>
                 <input type="text" name="specificorder" id="specificorder" placeholder="Your order here">
 
                 <button type="submit" class="send-button">Submit Order</button>
