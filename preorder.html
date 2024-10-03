@@ -112,13 +112,13 @@
         
                 <label for="number">Phone Number</label>
                 <input type="number" name="number" id="number" placeholder="Your Phone Number" required>
-        
+
                 <label for="pickuptime">When do you want to pick up your drink?</label>
-                <input type="datetime-local" name="pickuptime" id="pickuptime" required>
+                <input type="text" name="pickuptime" id="pickuptime" placeholder="Your specific time" required>
         
-                <label for="order">Order</label>
-                <select name="order" id="order" required>
-                    <option value="" disabled selected>Select your drink</option>
+                <label for="order">Most Popular Items</label>
+                <select name="order" id="order">
+                    <option value="" disabled selected>Select an item</option>
                     <option value="Hot Spiced Chai (16oz) - $5.75">Hot Spiced Chai (16oz) - $5.75</option>
                     <option value="Hot Spiced Chai (24oz) - $8.00">Hot Spiced Chai (24oz) - $8.00</option>
                     <option value="Frozen Spiced Chai (16oz) - $5.75">Frozen Spiced Chai (16oz) - $5.75</option>
@@ -135,7 +135,11 @@
                     <option value="Diet Coke - $2.00">Diet Coke - $2.00</option>
                     <option value="Dr. Pepper - $2.00">Dr. Pepper - $2.00</option>
                     <option value="Sprite - $2.00">Sprite - $2.00</option>
-                </select>        
+                </select>
+                
+                <label for="specificorder">Specific Order? Right here!</label>
+                <input type="text" name="specificorder" id="specificorder" placeholder="Your order here">
+
                 <button type="submit" class="send-button">Submit Order</button>
             </form>
         </section>
