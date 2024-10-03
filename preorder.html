@@ -109,19 +109,37 @@
             <form action="mailto:blondiebrewspreorder@gmail.com" method="get" enctype="text/plain">
                 <label for="name">Name</label>
                 <input type="text" name="name" id="name" placeholder="Your Name" required>
-
+        
                 <label for="number">Phone Number</label>
                 <input type="number" name="number" id="number" placeholder="Your Phone Number" required>
-
+        
                 <label for="pickuptime">When do you want to pick up your drink?</label>
-                <input type="pickuptime" name="pickuptime" id="pickuptime" placeholder="Wanted Pickup Time" required>
-
+                <input type="datetime-local" name="pickuptime" id="pickuptime" required>
+        
                 <label for="order">Order</label>
-                <textarea name="order" id="order" placeholder="Your Order" rows="4" required></textarea>
-
+                <select name="order" id="order" required>
+                    <option value="" disabled selected>Select your drink</option>
+                    <option value="Hot Spiced Chai (16oz) - $5.75">Hot Spiced Chai (16oz) - $5.75</option>
+                    <option value="Hot Spiced Chai (24oz) - $8.00">Hot Spiced Chai (24oz) - $8.00</option>
+                    <option value="Frozen Spiced Chai (16oz) - $5.75">Frozen Spiced Chai (16oz) - $5.75</option>
+                    <option value="Frozen Spiced Chai (24oz) - $8.00">Frozen Spiced Chai (24oz) - $8.00</option>
+                    <option value="Iced Spiced Chai (16oz) - $5.75">Iced Spiced Chai (16oz) - $5.75</option>
+                    <option value="Iced Spiced Chai (24oz) - $8.00">Iced Spiced Chai (24oz) - $8.00</option>
+                    <option value="Hot Tea (12oz) - $1.75">Hot Tea (12oz) - $1.75</option>
+                    <option value="Hot Tea (16oz) - $2.25">Hot Tea (16oz) - $2.25</option>
+                    <option value="Hot Tea (24oz) - $3.50">Hot Tea (24oz) - $3.50</option>
+                    <option value="Iced Tea (12oz) - $1.75">Iced Tea (12oz) - $1.75</option>
+                    <option value="Iced Tea (16oz) - $2.25">Iced Tea (16oz) - $2.25</option>
+                    <option value="Iced Tea (24oz) - $3.50">Iced Tea (24oz) - $3.50</option>
+                    <option value="Coke - $2.00">Coke - $2.00</option>
+                    <option value="Diet Coke - $2.00">Diet Coke - $2.00</option>
+                    <option value="Dr. Pepper - $2.00">Dr. Pepper - $2.00</option>
+                    <option value="Sprite - $2.00">Sprite - $2.00</option>
+                </select>        
                 <button type="submit" class="send-button">Submit Order</button>
             </form>
         </section>
+        
     </main>
 
     <footer>
