@@ -44,42 +44,6 @@
             border-bottom: 2px solid #b58f5b; /* Darker caramel */
             padding-bottom: 10px;
         }
-        label {
-            display: block;
-            margin: 10px 0 5px;
-        }
-        input, textarea {
-            width: calc(100% - 22px);
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 1em;
-        }
-        .send-button {
-            background-color: #b58f5b; /* Darker caramel */
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s;
-        }
-        .send-button:hover {
-            background-color: #a07a4a; /* Even darker on hover */
-        }
-        nav {
-            margin-top: 10px; /* Optional: space between title and nav */
-        }
-        nav a {
-            color: white; /* White text color */
-            text-decoration: none; /* Remove underline */
-            margin: 0 15px; /* Spacing between links */
-        }
-        nav a:hover {
-            text-decoration: underline; /* Optional: underline on hover */
-        }
         footer {
             background-color: #d2b48c; /* Light caramel */
             color: white;
@@ -88,6 +52,14 @@
             position: relative;
             bottom: 0;
             width: 100%;
+        }
+        /* Add responsive iframe */
+        .google-form-embed {
+            width: 100%;
+            height: 600px; /* Adjust height as needed */
+            border: none;
+            border-radius: 8px;
+            overflow: hidden;
         }
     </style>
 </head>
@@ -107,44 +79,8 @@
             <h2>Preorder Your Coffee</h2>
             <p>Fill out the form below to preorder your favorite drinks. Made 15 minutes prior to your pickup time!</p>
             <p>You can choose one of our most popular sold items, or put a specific order in! (Please include what you'd like, for example: whipped cream, no sugar, etc)</p>
-            <form action="mailto:blondiebrewspreorder@gmail.com" method="get" enctype="text/plain">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" placeholder="Your Name" required>
-        
-                <label for="number">Phone Number</label>
-                <input type="number" name="number" id="number" placeholder="Your Phone Number" required>
-
-                <label for="pickuptime">When do you want to pick up your drink?</label>
-                <input type="text" name="pickuptime" id="pickuptime" placeholder="Your specific time" required>
-        
-                <label for="order">Our Most Popular Items</label>
-                <select name="order" id="order">
-                    <option value="" disabled selected>Select an item</option>
-                    <option value="Hot Spiced Chai (16oz) - $5.75">Hot Spiced Chai (16oz) - $5.75</option>
-                    <option value="Hot Spiced Chai (24oz) - $8.00">Hot Spiced Chai (24oz) - $8.00</option>
-                    <option value="Frozen Spiced Chai (16oz) - $5.75">Frozen Spiced Chai (16oz) - $5.75</option>
-                    <option value="Frozen Spiced Chai (24oz) - $8.00">Frozen Spiced Chai (24oz) - $8.00</option>
-                    <option value="Iced Spiced Chai (16oz) - $5.75">Iced Spiced Chai (16oz) - $5.75</option>
-                    <option value="Iced Spiced Chai (24oz) - $8.00">Iced Spiced Chai (24oz) - $8.00</option>
-                    <option value="Hot Tea (12oz) - $1.75">Hot Tea (12oz) - $1.75</option>
-                    <option value="Hot Tea (16oz) - $2.25">Hot Tea (16oz) - $2.25</option>
-                    <option value="Hot Tea (24oz) - $3.50">Hot Tea (24oz) - $3.50</option>
-                    <option value="Iced Tea (12oz) - $1.75">Iced Tea (12oz) - $1.75</option>
-                    <option value="Iced Tea (16oz) - $2.25">Iced Tea (16oz) - $2.25</option>
-                    <option value="Iced Tea (24oz) - $3.50">Iced Tea (24oz) - $3.50</option>
-                    <option value="Coke - $2.00">Coke - $2.00</option>
-                    <option value="Diet Coke - $2.00">Diet Coke - $2.00</option>
-                    <option value="Dr. Pepper - $2.00">Dr. Pepper - $2.00</option>
-                    <option value="Sprite - $2.00">Sprite - $2.00</option>
-                </select>
-                
-                <label for="specificorder">Got a specific order? Put it right here!</label>
-                <input type="text" name="specificorder" id="specificorder" placeholder="Your order here">
-
-                <button type="submit" class="send-button">Submit Order</button>
-            </form>
+            <iframe class="google-form-embed" src="https://docs.google.com/forms/d/e/1FAIpQLSeY9f4gJmMeNXk5B4PdWT6x8Eq-E5amfPSin9Xmov7qJ4d6YA/viewform" frameborder="0">Loading…</iframe>
         </section>
-        
     </main>
 
     <footer>
