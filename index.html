@@ -209,4 +209,50 @@
         <p>&copy; 2024 Blondie Brews. All Rights Reserved.</p>
     </footer>
 </body>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+
+$(document).keydown(function (event) {
+    if (event.keyCode == 123) { // Prevent F12
+        alert('Content is protected\nYou cannot view the Dev Tools.');
+		return false;
+    } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) { // Prevent Ctrl+Shift+I        
+        alert('Content is protected\nYou cannot view the Dev Tools.');
+		return false;
+    }
+});
+</script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+document.onkeydown = function(e) {
+        if (e.ctrlKey && 
+            (e.keyCode === 67 || 
+             e.keyCode === 86 || 
+             e.keyCode === 85 || 
+             e.keyCode === 117)) {
+            return false;
+        } else {
+            return true;
+        }
+};
+$(document).keypress("u",function(e) {
+  if(e.ctrlKey)
+  {
+return false;
+}
+else
+{
+return true;
+}
+});
+</script>
+
+<script>
+    document.addEventListener("contextmenu", function(event) {
+        event.preventDefault();
+    });
+</script>
+
 </html>
