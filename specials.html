@@ -49,15 +49,38 @@
             padding-bottom: 10px;
         }
         nav {
-            margin-top: 10px; /* Optional: space between title and nav */
+            margin-top: 10px;
+            display: flex; /* Use flexbox for better alignment */
+            justify-content: center; /* Center the nav items */
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
         }
+
         nav a {
-            color: white; /* White text color */
-            text-decoration: none; /* Remove underline */
-            margin: 0 15px; /* Spacing between links */
+            color: white;
+            text-decoration: none;
+            margin: 10px; /* Add margin for spacing */
+            padding: 10px 15px; /* Button-like padding */
+            border: 2px solid white; /* White border */
+            border-radius: 5px; /* Slightly rounded corners */
+            transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
         }
+
         nav a:hover {
-            text-decoration: underline; /* Optional: underline on hover */
+            background-color: #b58f5b; /* Background change on hover */
+            transform: scale(1.05); /* Slight scale effect */
+        }
+
+        nav a:active {
+            background-color: #3b2a2a; /* Background change when clicked */
+            transform: scale(0.95); /* Slightly shrink when active */
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 600px) {
+            nav a {
+                padding: 8px 12px; /* Adjust padding for smaller screens */
+                font-size: 0.9em; /* Slightly smaller font size */
+            }
         }
         footer {
             background-color: #d2b48c; /* Light caramel */
