@@ -48,6 +48,16 @@
             border-bottom: 2px solid #b58f5b; /* Darker caramel */
             padding-bottom: 10px;
         }
+        .countdown {
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+            background-color: #b58f5b; /* Darker caramel */
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
         nav {
             margin-top: 10px;
             display: flex; /* Use flexbox for better alignment */
@@ -105,17 +115,21 @@
 
     <main>
         <section>
+            <!-- Countdown Timer -->
+            <div class="countdown" id="countdownTimer">
+                New Specials in...
+            </div>
+
             <h2>November's Specials</h2>
-            <p>Check out our amazing once-a-month specials!
-	    Changes December 3rd, 9AM.</p>
+            <p>Check out our amazing once-a-month specials!</p>
             <ul>
                 <li>LB (Mocha, Toffenut, Caramel, Salt)</li>
-		<li>Maple Pancake Chai</li>
-		<li>Chunky Turkey</li>
-		<li>Cotton Candy Lemonade</li>
-		<li>Irish Cream Coconut</li>
-		<li>The Wicked Good</li>
-		<li>Spicy Elvis</li>
+                <li>Maple Pancake Chai</li>
+                <li>Chunky Turkey</li>
+                <li>Cotton Candy Lemonade</li>
+                <li>Irish Cream Coconut</li>
+                <li>The Wicked Good</li>
+                <li>Spicy Elvis</li>
             </ul>
         </section>
     </main>
@@ -123,24 +137,45 @@
     <footer>
         <p>&copy; 2024 Blondie Brews. All Rights Reserved.</p>
     </footer>
-</body>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script>
-$(document).keydown(function (event) {
-    if (event.keyCode == 123) { // Prevent F12
-        alert('Content is protected\nYou cannot view the Dev Tools.');
-		return false;
-    } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) { // Prevent Ctrl+Shift+I        
-        alert('Content is protected\nYou cannot view the Dev Tools.');
-		return false;
-    }
-});
-</script>
+    <!-- Countdown Timer Script -->
+    <script>
+        // Set the target date (December 3rd, 9:00 AM Central Time)
+        const targetDate = new Date('December 3, 2024 09:00:00 GMT-0600').getTime();
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script>
-document.onkeydown = function(e) {
+        // Update the countdown every second
+        const countdownInterval = setInterval(function() {
+            const now = new Date().getTime();
+            const timeRemaining = targetDate - now;
+
+            if (timeRemaining <= 0) {
+                clearInterval(countdownInterval);
+                document.getElementById('countdownTimer').innerHTML = "New Specials are here!";
+            } else {
+                const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+
+                document.getElementById('countdownTimer').innerHTML = `New Specials in ${days}d ${hours}h ${minutes}m`;
+            }
+        }, 1000);
+    </script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+    $(document).keydown(function (event) {
+        if (event.keyCode == 123) { // Prevent F12
+            alert('Content is protected\nYou cannot view the Dev Tools.');
+            return false;
+        } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) { // Prevent Ctrl+Shift+I        
+            alert('Content is protected\nYou cannot view the Dev Tools.');
+            return false;
+        }
+    });
+    </script>
+
+    <script>
+    document.onkeydown = function(e) {
         if (e.ctrlKey && 
             (e.keyCode === 67 || 
              e.keyCode === 86 || 
@@ -150,23 +185,20 @@ document.onkeydown = function(e) {
         } else {
             return true;
         }
-};
-$(document).keypress("u",function(e) {
-  if(e.ctrlKey)
-  {
-return false;
-}
-else
-{
-return true;
-}
-});
-</script>
-
-<script>
-    document.addEventListener("contextmenu", function(event) {
-        event.preventDefault();
+    };
+    $(document).keypress("u",function(e) {
+        if(e.ctrlKey) {
+            return false;
+        } else {
+            return true;
+        }
     });
-</script>
+    </script>
 
+    <script>
+        document.addEventListener("contextmenu", function(event) {
+            event.preventDefault();
+        });
+    </script>
+</body>
 </html>
