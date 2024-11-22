@@ -117,7 +117,7 @@
         <section>
             <!-- Countdown Timer -->
             <div class="countdown" id="countdownTimer">
-                New Specials in...
+                Loading countdown...
             </div>
 
             <h2>November's Specials</h2>
@@ -156,7 +156,7 @@
                 const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
 
-                document.getElementById('countdownTimer').innerHTML = `New Specials in ${days}d ${hours}h ${minutes}m`;
+                document.getElementById('countdownTimer').innerHTML = `New Specials in ${days} days ${hours} hours ${minutes} minutes`;
             }
         }, 1000);
     </script>
