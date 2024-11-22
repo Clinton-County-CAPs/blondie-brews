@@ -9,21 +9,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         html, body {
-            width: 100%; /* Ensure the width is set to 100% */
-            overflow-x: hidden; /* Prevent horizontal scrolling */
+            width: 100%;
+            overflow-x: hidden;
         }
         body {
             font-family: 'Raleway', sans-serif;
-            background-color: #f5f5dc; /* Soft cream */
-            color: #3b2a2a; /* Dark chocolate brown */
+            background-color: #f5f5dc;
+            color: #3b2a2a;
             margin: 0;
             padding: 0;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
+            overflow-x: hidden;
         }
         header {
-            background-color: #d2b48c; /* Light caramel */
+            background-color: #d2b48c;
             padding: 20px;
             text-align: center;
+            position: relative; /* Allow positioning of the Instagram icon */
         }
         h1 {
             font-size: 3em;
@@ -32,37 +33,38 @@
         }
         nav {
             margin-top: 10px;
-            display: flex; /* Use flexbox for better alignment */
-            justify-content: center; /* Center the nav items */
-            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
-
         nav a {
             color: white;
             text-decoration: none;
-            margin: 8px; /* Add margin for spacing */
-            padding: 8px 10px; /* Button-like padding */
-            border: 2px solid white; /* White border */
-            border-radius: 5px; /* Slightly rounded corners */
-            transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+            margin: 8px;
+            padding: 8px 10px;
+            border: 2px solid white;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
         }
-
         nav a:hover {
-            background-color: #b58f5b; /* Background change on hover */
-            transform: scale(1.05); /* Slight scale effect */
+            background-color: #b58f5b;
+            transform: scale(1.05);
         }
-
         nav a:active {
-            background-color: #3b2a2a; /* Background change when clicked */
-            transform: scale(0.95); /* Slightly shrink when active */
+            background-color: #3b2a2a;
+            transform: scale(0.95);
         }
-
-        /* Mobile Optimization */
-        @media (max-width: 600px) {
-            nav a {
-                padding: 8px 12px; /* Adjust padding for smaller screens */
-                font-size: 0.9em; /* Slightly smaller font size */
-            }
+        /* Instagram Icon Styles */
+        .instagram-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2em;
+            color: white;
+            transition: color 0.3s;
+        }
+        .instagram-icon:hover {
+            color: #b58f5b; /* Change icon color on hover */
         }
         .hero {
             position: relative;
@@ -70,7 +72,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden; /* Prevent overflow of the pseudo-element */
+            overflow: hidden;
         }
         .hero::before {
             content: "";
@@ -81,22 +83,22 @@
             bottom: 0;
             background-image: url('https://lh3.googleusercontent.com/p/AF1QipNa01r0Qe7MB9XfocH4twTzMReutB74NjTlXTq2=s1360-w1360-h1020');
             background-size: cover;
-            filter: blur(8px); /* Adjust the blur radius as needed */
-            z-index: 0; /* Send the pseudo-element to the back */
+            filter: blur(8px);
+            z-index: 0;
         }
         .hero h2 {
-            position: relative; /* Keep the text above the blurred background */
-            z-index: 1; /* Bring the text above the pseudo-element */
+            position: relative;
+            z-index: 1;
             color: white;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
         main {
             padding: 20px;
-            max-width: 1200px; /* Set a max-width to prevent overflow */
-            margin: 0 auto; /* Center the content */
+            max-width: 1200px;
+            margin: 0 auto;
         }
         section {
-            max-width: 800px; /* Ensure sections are not too wide */
+            max-width: 800px;
             margin: 20px auto;
             padding: 20px;
             background-color: white;
@@ -105,37 +107,12 @@
         }
         h2 {
             font-size: 2em;
-            color: #d2b48c; /* Light caramel */
-            border-bottom: 2px solid #b58f5b; /* Darker caramel */
+            color: #d2b48c;
+            border-bottom: 2px solid #b58f5b;
             padding-bottom: 10px;
         }
-        label {
-            display: block;
-            margin: 10px 0 5px;
-        }
-        input, textarea {
-            width: calc(100% - 22px);
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 1em;
-        }
-        .send-button {
-            background-color: #b58f5b; /* Darker caramel */
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s;
-        }
-        .send-button:hover {
-            background-color: #a07a4a; /* Even darker on hover */
-        }
         footer {
-            background-color: #d2b48c; /* Light caramel */
+            background-color: #d2b48c;
             color: white;
             text-align: center;
             padding: 15px;
@@ -143,19 +120,18 @@
             bottom: 0;
             width: 100%;
         }
-        /* Gallery styles */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
-            gap: 20px; /* Space between images */
-            justify-items: center; /* Center images within their grid cells */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            justify-items: center;
         }
         .gallery img {
-            width: 100%; /* Ensure images are responsive */
-            height: 250px; /* Increased height for a more zoomed-in effect */
-            object-fit: cover; /* Maintain aspect ratio, cropping if necessary */
-            border-radius: 8px; /* Optional: rounded corners */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: shadow for effect */
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -165,15 +141,18 @@
         <i class="fas fa-bullhorn" style="margin-right: 10px;"></i> <!-- Megaphone Icon -->
         Delivery service coming soon!
     </div>
-	
+    
     <header>
         <h1>Blondie Brews</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="specials.html">Specials</a>
             <a href="preorder.html">Preorder</a>
-           <!--- <a href="delivery.html">Delivery</a> --->
         </nav>
+        <!-- Instagram Icon -->
+        <a href="https://www.instagram.com/blondiebrewscoffee11" class="instagram-icon" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
     </header>
 
     <div class="hero">
@@ -205,15 +184,14 @@
 $(document).keydown(function (event) {
     if (event.keyCode == 123) { // Prevent F12
         alert('Content is protected\nYou cannot view the Dev Tools.');
-		return false;
+        return false;
     } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) { // Prevent Ctrl+Shift+I        
         alert('Content is protected\nYou cannot view the Dev Tools.');
-		return false;
+        return false;
     }
 });
 </script>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>
 document.onkeydown = function(e) {
         if (e.ctrlKey && 
@@ -229,12 +207,12 @@ document.onkeydown = function(e) {
 $(document).keypress("u",function(e) {
   if(e.ctrlKey)
   {
-return false;
-}
-else
-{
-return true;
-}
+    return false;
+  }
+  else
+  {
+    return true;
+  }
 });
 </script>
 
