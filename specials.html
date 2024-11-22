@@ -103,6 +103,24 @@
         </nav>
     </header>
 
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="jquery.plugin.js"></script>
+        <script src="jquery.countdown.js"></script>
+        <script>
+            $(function () {
+                var date = new Date();
+                date = new Date(date.getFullYear(), date.getMonth() + 1, 1);
+                $('#defaultCountdown').countdown({until: date});
+            });
+        </script>
+    </head>
+
+    <body>
+        New Specials In:
+        <div id="defaultCountdown"/>        
+    </body>
+
     <main>
         <section>
             <h2>November's Specials</h2>
