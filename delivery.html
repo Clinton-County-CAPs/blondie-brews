@@ -9,20 +9,20 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         html, body {
-            width: 100%; /* Ensure the width is set to 100% */
-            overflow-x: hidden; /* Prevent horizontal scrolling */
+            width: 100%;
+            overflow-x: hidden;
         }
 
         body {
             font-family: 'Raleway', sans-serif;
-            background-color: #f5f5dc; /* Soft cream */
-            color: #3b2a2a; /* Dark chocolate brown */
+            background-color: #f5f5dc;
+            color: #3b2a2a;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-color: #d2b48c; /* Light caramel */
+            background-color: #d2b48c;
             padding: 20px;
             text-align: center;
         }
@@ -35,12 +35,12 @@
 
         main {
             padding: 20px;
-            max-width: 1200px; /* Set a max-width to prevent overflow */
-            margin: 0 auto; /* Center the content */
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         section {
-            max-width: 800px; /* Ensure sections are not too wide */
+            max-width: 800px;
             margin: 20px auto;
             padding: 20px;
             background-color: white;
@@ -50,13 +50,13 @@
 
         h2 {
             font-size: 2em;
-            color: #d2b48c; /* Light caramel */
-            border-bottom: 2px solid #b58f5b; /* Darker caramel */
+            color: #d2b48c;
+            border-bottom: 2px solid #b58f5b;
             padding-bottom: 10px;
         }
 
         footer {
-            background-color: #d2b48c; /* Light caramel */
+            background-color: #d2b48c;
             color: white;
             text-align: center;
             padding: 15px;
@@ -64,20 +64,27 @@
             bottom: 0;
             width: 100%;
         }
-        /* Facebook Icon Styles */
+
+        .highlight-text {
+            display: block;
+            font-size: 1.5em;
+            color: red;
+            font-weight: bold;
+        }
+
         .facebook-icon {
             position: absolute;
             top: 20px;
-            right: 80px; /* Adjust the position to prevent overlap */
+            right: 80px;
             font-size: 2em;
             color: white;
             transition: color 0.3s;
         }
-        
+
         .facebook-icon:hover {
-            color: #1877f2; /* Change icon color on hover (Facebook blue) */
+            color: #1877f2;
         }
-        /* Instagram Icon Styles */
+
         .instagram-icon {
             position: absolute;
             top: 20px;
@@ -86,14 +93,14 @@
             color: white;
             transition: color 0.3s;
         }
+
         .instagram-icon:hover {
-            color: #b58f5b; /* Change icon color on hover */
+            color: #b58f5b;
         }
 
-        /* Add responsive iframe */
         .google-form-embed {
             width: 100%;
-            height: 600px; /* Adjust height as needed */
+            height: 600px;
             border: none;
             border-radius: 8px;
             overflow: hidden;
@@ -101,36 +108,35 @@
 
         nav {
             margin-top: 10px;
-            display: flex; /* Use flexbox for better alignment */
-            justify-content: center; /* Center the nav items */
-            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 8px; /* Add margin for spacing */
-            padding: 8px 10px; /* Button-like padding */
-            border: 2px solid white; /* White border */
-            border-radius: 5px; /* Slightly rounded corners */
-            transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+            margin: 8px;
+            padding: 8px 10px;
+            border: 2px solid white;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
         }
 
         nav a:hover {
-            background-color: #b58f5b; /* Background change on hover */
-            transform: scale(1.05); /* Slight scale effect */
+            background-color: #b58f5b;
+            transform: scale(1.05);
         }
 
         nav a:active {
-            background-color: #3b2a2a; /* Background change when clicked */
-            transform: scale(0.95); /* Slightly shrink when active */
+            background-color: #3b2a2a;
+            transform: scale(0.95);
         }
 
-        /* Mobile Optimization */
         @media (max-width: 600px) {
             nav a {
-                padding: 8px 12px; /* Adjust padding for smaller screens */
-                font-size: 0.9em; /* Slightly smaller font size */
+                padding: 8px 12px;
+                font-size: 0.9em;
             }
         }
     </style>
@@ -144,11 +150,9 @@
             <a href="preorder.html">Preorder</a>
             <a href="delivery.html">Delivery</a>
         </nav>
-        <!-- Facebook Icon -->
         <a href="https://www.facebook.com/BlondieBrews" class="facebook-icon" target="_blank">
             <i class="fab fa-facebook"></i>
         </a>
-        <!-- Instagram Icon -->
         <a href="https://www.instagram.com/blondiebrewscoffee11" class="instagram-icon" target="_blank">
             <i class="fab fa-instagram"></i>
         </a>
@@ -157,7 +161,7 @@
     <main>
         <section>
             <h2>Get your drinks delivered!</h2>
-            <p>Fill out the form below to order delivery on your favorite drinks. THIS IS FOR LOCAL BUSINESSES / ELEMENTARY ONLY AT THIS TIME!!</p>
+            <p><span class="highlight-text">THIS IS FOR LOCAL BUSINESSES / ELEMENTARY ONLY AT THIS TIME!! Failure to pay will result in no transaction.</span></p>
             <p>You can choose one of our most popular sold items, or put a specific order in! (Please include what you'd like, for example: whipped cream, no sugar, etc)</p>
             <iframe class="google-form-embed" src="https://docs.google.com/forms/d/e/1FAIpQLSd7IVFO82rlznDZzXT-GZhUVON-urtAFcC-YW0I2EOgKgOWgQ/viewform?vc=0&c=0&w=1&flr=0" frameborder="0">Loading…</iframe>
         </section>
@@ -167,48 +171,4 @@
         <p>&copy; 2024 Blondie Brews. All Rights Reserved.</p>
     </footer>
 </body>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script>
-$(document).keydown(function (event) {
-    if (event.keyCode == 123) { // Prevent F12
-        alert('Content is protected\nYou cannot view the Dev Tools.');
-		return false;
-    } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) { // Prevent Ctrl+Shift+I        
-        alert('Content is protected\nYou cannot view the Dev Tools.');
-		return false;
-    }
-});
-</script>
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script>
-document.onkeydown = function(e) {
-        if (e.ctrlKey && 
-            (e.keyCode === 67 || 
-             e.keyCode === 86 || 
-             e.keyCode === 85 || 
-             e.keyCode === 117)) {
-            return false;
-        } else {
-            return true;
-        }
-};
-$(document).keypress("u",function(e) {
-  if(e.ctrlKey)
-  {
-return false;
-}
-else
-{
-return true;
-}
-});
-</script>
-
-<script>
-    document.addEventListener("contextmenu", function(event) {
-        event.preventDefault();
-    });
-</script>
-
 </html>
