@@ -12,7 +12,6 @@
             margin: 0;
             padding: 0;
             width: 100%;
-            height: 100%;
             overflow-x: hidden;
         }
 
@@ -47,7 +46,7 @@
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            overflow: hidden; /* Prevent any content overflow */
+            overflow: hidden;
         }
 
         h2 {
@@ -100,31 +99,29 @@
             color: #b58f5b;
         }
 
-        /* Responsive iframe styling */
+        /* Embed form styling */
         .google-form-embed {
             width: 100%;
-            height: 100%; /* 100% of the container height */
-            min-height: 600px; /* Minimum height to prevent collapse */
+            height: 600px; /* Adjust this height as needed */
             border: none;
             border-radius: 8px;
             overflow: hidden;
         }
 
-        /* Prevents overflow and ensures everything fits in its container */
-        section {
-            height: auto; /* Let it grow with content */
-        }
-
-        /* Mobile adjustments */
+        /* Mobile Styling */
         @media (max-width: 600px) {
             section {
                 padding: 15px;
             }
 
-            /* Adjust iframe height to fit smaller screen sizes */
             .google-form-embed {
-                height: 800px; /* Fixed height for mobile, adjust as needed */
+                height: 800px; /* Make iframe a bit taller on mobile */
             }
+        }
+
+        /* Smooth scrolling for the entire page */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
