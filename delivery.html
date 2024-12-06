@@ -9,11 +9,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         html, body {
+            margin: 0;
+            padding: 0;
             width: 100%;
             height: 100%;
             overflow-x: hidden;
-            margin: 0;
-            padding: 0;
         }
 
         body {
@@ -47,6 +47,7 @@
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Prevent any content overflow */
         }
 
         h2 {
@@ -99,56 +100,30 @@
             color: #b58f5b;
         }
 
-        /* Updated iframe styling */
+        /* Responsive iframe styling */
         .google-form-embed {
             width: 100%;
-            height: 60vh; /* Use viewport height to make the iframe responsive */
+            height: 100%; /* 100% of the container height */
+            min-height: 600px; /* Minimum height to prevent collapse */
             border: none;
             border-radius: 8px;
             overflow: hidden;
         }
 
-        /* Ensure the section does not overflow */
+        /* Prevents overflow and ensures everything fits in its container */
         section {
-            overflow: hidden; /* Prevent overflow from breaking layout */
+            height: auto; /* Let it grow with content */
         }
 
-        nav {
-            margin-top: 10px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 8px;
-            padding: 8px 10px;
-            border: 2px solid white;
-            border-radius: 5px;
-            transition: background-color 0.3s, transform 0.2s;
-        }
-
-        nav a:hover {
-            background-color: #b58f5b;
-            transform: scale(1.05);
-        }
-
-        nav a:active {
-            background-color: #3b2a2a;
-            transform: scale(0.95);
-        }
-
+        /* Mobile adjustments */
         @media (max-width: 600px) {
-            nav a {
-                padding: 8px 12px;
-                font-size: 0.9em;
+            section {
+                padding: 15px;
             }
 
-            /* Adjust iframe height further for smaller screens */
+            /* Adjust iframe height to fit smaller screen sizes */
             .google-form-embed {
-                height: 80vh; /* More height for smaller screens */
+                height: 800px; /* Fixed height for mobile, adjust as needed */
             }
         }
     </style>
