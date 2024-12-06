@@ -98,43 +98,56 @@
             color: #b58f5b;
         }
 
-        /* Responsive styling for iframe */
+        /* Fix Google Form iframe responsiveness */
         .google-form-embed {
             width: 100%;
-            max-width: 800px; /* Ensures the form does not stretch too wide on larger screens */
-            height: 800px; /* A reasonable default height to fit most forms */
+            height: 600px; /* Initial height */
             border: none;
             border-radius: 8px;
             overflow: hidden;
             margin: 0 auto;
         }
 
-        /* Adjust iframe size on mobile screens */
+        /* Ensure the form resizes for small screens */
         @media (max-width: 600px) {
             .google-form-embed {
-                height: 1200px; /* Increase height on smaller screens for better fit */
+                height: 800px; /* Increase height for mobile */
             }
         }
 
-        /* Mobile Styling for header and section padding */
+        /* Ensure navigation items are properly aligned */
+        nav {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 8px;
+            padding: 8px 15px;
+            border: 2px solid white;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        nav a:hover {
+            background-color: #b58f5b;
+            transform: scale(1.05);
+        }
+
+        nav a:active {
+            background-color: #3b2a2a;
+            transform: scale(0.95);
+        }
+
         @media (max-width: 600px) {
-            section {
-                padding: 15px;
-            }
-
-            header {
-                padding: 10px;
-            }
-
             nav a {
-                padding: 8px 12px;
-                font-size: 0.9em;
+                padding: 10px 12px;
+                font-size: 1em;
             }
-        }
-
-        /* Smooth scrolling for the entire page */
-        html {
-            scroll-behavior: smooth;
         }
     </style>
 </head>
